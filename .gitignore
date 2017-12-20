@@ -1,0 +1,3 @@
+*.dmp
+*.csv
+.ipynb_checkpoints/
