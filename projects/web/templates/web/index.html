@@ -19,8 +19,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- Can put logo in the link tag below -->
-                    <a class="navbar-brand" href="index.html">SingYourSoul</a>
+                    {% load static %}
+                    <a class="navbar-brand" href="index.html"><img src='{% static "web/images/logo.png" %}' style="height:28px;display:inline" /> SingYourSoul</a>
                 </div>
                 <nav class="navbar-collapse bs-navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
