@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello world!")
+    if request.GET.get('lyricsInput'):
+        lyricsInput = request.GET.get('lyricsInput')
+        context = {'output_lyrics': lyricsInput}
+    else:
+        context = {'output_lyrics': 'You will sing out loud here!'}
+    return render(request, 'web/index.html', context)
