@@ -34,16 +34,14 @@
         <div class="page-content">
             <div class="container" style="padding-top:10px;padding-bottom:50px">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 text-center">
                         <form method="GET">
                             {% csrf_token %}
-                            <textarea name="lyricsInput" rows="2" cols="50" required>
-                                Tell us a bit what you wanna sing! 
-                            </textarea>
+                            <textarea name="lyricsInput" rows="2" cols="50" required>Tell us a bit what you wanna sing! </textarea>
                             <br>
                             <input type="submit" value="Submit">
                         </form>
-                        <p>{{ output_lyrics }}</p>
+                        <p>{{ output_lyrics|linebreaksbr }}</p>
                     </div>
                 </div>
             </div>
