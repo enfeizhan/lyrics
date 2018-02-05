@@ -44,7 +44,7 @@ def recover_double_apos(mobject):
     return mobject.group(0)[:2] + mobject.group(0)[3] + mobject.group(0)[-2:]
 
 
-def data_cleaning(dat):
+def data_curating(dat):
     dat.loc[:, 'cleaned_text'] = dat.text.str.lower()
     dat.loc[:, 'cleaned_text'] = dat.cleaned_text.str.replace(
         "''cause",
@@ -84,6 +84,10 @@ def data_cleaning(dat):
     )
     dat.loc[:, 'cleaned_text'] = dat.cleaned_text.str.replace(r' {2,}', ' ')
     dat.loc[:, 'cleaned_text'] = dat.cleaned_text.str.strip()
+    return dat.loc[:, 'cleaned_text']
+
+
+def data_cleaning(dat):
     dat.loc[:, 'text_list'] = dat.cleaned_text.str.split(' ')
     return dat.loc[:, 'text_list']
 
