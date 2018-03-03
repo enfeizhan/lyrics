@@ -173,7 +173,7 @@ def save_unique_tokens(unique_tokens, filename='unique_tokens'):
     msg = 'Make sure all tokens unique!'
     assert len(unique_tokens) == len(set(unique_tokens)), msg
     unique_token_series = pd.Series(unique_tokens)
-    unique_token_series.to_csv(filename, index=False, header=None)
+    unique_token_series.to_csv(filename, header=None)
 
 
 def get_index_word_map(unique_tokens):
