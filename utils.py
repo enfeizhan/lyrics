@@ -239,7 +239,7 @@ def make_training_samples(pd_series, input_length=10):
 
 
 def save_training_samples(samples, filename='train.csv'):
-    samples.to_csv('train.csv', index=False, header=None)
+    samples.to_csv(filename, index=False, header=None)
 
 
 def tokenise(word2ind, words):
